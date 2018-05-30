@@ -1,0 +1,34 @@
++----------------------------------------+
+| Without joining to find Playlist Name: |
++----------------------------------------+
+
+mysql> select distinct PlaylistId, count(TrackId) from PlaylistTrack group by PlaylistId having count(TrackId) = 1;
++------------+----------------+
+| PlaylistId | count(TrackId) |
++------------+----------------+
+|          9 |              1 |
+|         18 |              1 |
++------------+----------------+
+2 rows in set (0.00 sec)
+
+
+
+
++-----------------------------------------------------------------------------+
+| Joining to find the Playlist Name as well as ID, and rename column headers: | 
++-----------------------------------------------------------------------------+
+
+mysql> select distinct PlaylistTrack.PlaylistId as 'Playlist ID', Playlist.Name as 'Playlist Name', count(TrackId) as 'Number of Tracks' from PlaylistTrack
+    join Playlist on PlaylistTrack.PlaylistId = Playlist.PlaylistId
+    group by PlaylistTrack.PlaylistId
+    having count(TrackId) = 1;
+    
++-------------+---------------+------------------+
+| Playlist ID | Playlist Name | Number of Tracks |
++-------------+---------------+------------------+
+|           9 | Music Videos  |                1 |
+|          18 | On-The-Go 1   |                1 |
++-------------+---------------+------------------+
+2 rows in set (0.00 sec)
+
+mysql> notee

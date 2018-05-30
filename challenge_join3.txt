@@ -1,0 +1,13 @@
+mysql> select Track.Name as 'Track Name', Genre.Name as 'Genre', MediaType.Name as 'Media Type' from Track 
+    join Genre on Track.GenreId = Genre.GenreId
+    join MediaType on Track.MediaTypeId = MediaType.MediaTypeId
+    where MediaType.Name = 'Protected AAC audio file' and Genre.Name = 'Soundtrack';
+    
++---------------+------------+--------------------------+
+| Track Name    | Genre      | Media Type               |
++---------------+------------+--------------------------+
+| Koyaanisqatsi | Soundtrack | Protected AAC audio file |
++---------------+------------+--------------------------+
+1 row in set (0.00 sec)
+
+mysql> notee

@@ -1,0 +1,28 @@
+mysql> select Playlist.Name as 'Playlist Name', Track.Name as 'Track Name', Album.Title as 'Album Name' from Track
+    join PlaylistTrack on Track.TrackId = PlaylistTrack.TrackId
+    join Playlist on Playlist.PlaylistId = PlaylistTrack.PlaylistId
+    join Album on Track.AlbumId = Album.AlbumId
+    where Playlist.Name = 'Grunge';
+    
++---------------+-------------------------+-------------------+
+| Playlist Name | Track Name              | Album Name        |
++---------------+-------------------------+-------------------+
+| Grunge        | Man In The Box          | Facelift          |
+| Grunge        | Smells Like Teen Spirit | Nevermind         |
+| Grunge        | In Bloom                | Nevermind         |
+| Grunge        | Come As You Are         | Nevermind         |
+| Grunge        | Lithium                 | Nevermind         |
+| Grunge        | Drain You               | Nevermind         |
+| Grunge        | On A Plain              | Nevermind         |
+| Grunge        | Evenflow                | Ten               |
+| Grunge        | Alive                   | Ten               |
+| Grunge        | Jeremy                  | Ten               |
+| Grunge        | Daughter                | Vs.               |
+| Grunge        | Outshined               | A-Sides           |
+| Grunge        | Black Hole Sun          | A-Sides           |
+| Grunge        | Plush                   | Core              |
+| Grunge        | Hunger Strike           | Temple of the Dog |
++---------------+-------------------------+-------------------+
+15 rows in set (0.00 sec)
+
+mysql> notee

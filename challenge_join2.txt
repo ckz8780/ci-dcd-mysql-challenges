@@ -1,0 +1,138 @@
+mysql> select Track.Name as 'Track Name', Genre.Name as Genre from Track join Genre on Track.GenreId = Genre.GenreId where Genre.Name = 'Jazz';
++--------------------------------------------------------------+-------+
+| Track Name                                                   | Genre |
++--------------------------------------------------------------+-------+
+| Desafinado                                                   | Jazz  |
+| Garota De Ipanema                                            | Jazz  |
+| Samba De Uma Nota Só (One Note Samba)                        | Jazz  |
+| Por Causa De Você                                            | Jazz  |
+| Ligia                                                        | Jazz  |
+| Fotografia                                                   | Jazz  |
+| Dindi (Dindi)                                                | Jazz  |
+| Se Todos Fossem Iguais A Você (Instrumental)                 | Jazz  |
+| Falando De Amor                                              | Jazz  |
+| Angela                                                       | Jazz  |
+| Corcovado (Quiet Nights Of Quiet Stars)                      | Jazz  |
+| Outra Vez                                                    | Jazz  |
+| O Boto (Bôto)                                                | Jazz  |
+| Canta, Canta Mais                                            | Jazz  |
+| Quadrant                                                     | Jazz  |
+| Snoopy's search-Red baron                                    | Jazz  |
+| Spanish moss-"A sound portrait"-Spanish moss                 | Jazz  |
+| Moon germs                                                   | Jazz  |
+| Stratus                                                      | Jazz  |
+| The pleasant pheasant                                        | Jazz  |
+| Solo-Panhandler                                              | Jazz  |
+| Do what cha wanna                                            | Jazz  |
+| Heart of the Night                                           | Jazz  |
+| De La Luz                                                    | Jazz  |
+| Westwood Moon                                                | Jazz  |
+| Midnight                                                     | Jazz  |
+| Playtime                                                     | Jazz  |
+| Surrender                                                    | Jazz  |
+| Valentino's                                                  | Jazz  |
+| Believe                                                      | Jazz  |
+| As We Sleep                                                  | Jazz  |
+| When Evening Falls                                           | Jazz  |
+| J Squared                                                    | Jazz  |
+| Best Thing                                                   | Jazz  |
+| Now's The Time                                               | Jazz  |
+| Jeru                                                         | Jazz  |
+| Compulsion                                                   | Jazz  |
+| Tempus Fugit                                                 | Jazz  |
+| Walkin'                                                      | Jazz  |
+| 'Round Midnight                                              | Jazz  |
+| Bye Bye Blackbird                                            | Jazz  |
+| New Rhumba                                                   | Jazz  |
+| Generique                                                    | Jazz  |
+| Summertime                                                   | Jazz  |
+| So What                                                      | Jazz  |
+| The Pan Piper                                                | Jazz  |
+| Someday My Prince Will Come                                  | Jazz  |
+| My Funny Valentine (Live)                                    | Jazz  |
+| E.S.P.                                                       | Jazz  |
+| Nefertiti                                                    | Jazz  |
+| Petits Machins (Little Stuff)                                | Jazz  |
+| Miles Runs The Voodoo Down                                   | Jazz  |
+| Little Church (Live)                                         | Jazz  |
+| Black Satin                                                  | Jazz  |
+| Jean Pierre (Live)                                           | Jazz  |
+| Time After Time                                              | Jazz  |
+| Portia                                                       | Jazz  |
+| Jeepers Creepers                                             | Jazz  |
+| Blue Rythm Fantasy                                           | Jazz  |
+| Drum Boogie                                                  | Jazz  |
+| Let Me Off Uptown                                            | Jazz  |
+| Leave Us Leap                                                | Jazz  |
+| Opus No.1                                                    | Jazz  |
+| Boogie Blues                                                 | Jazz  |
+| How High The Moon                                            | Jazz  |
+| Disc Jockey Jump                                             | Jazz  |
+| Up An' Atom                                                  | Jazz  |
+| Bop Boogie                                                   | Jazz  |
+| Lemon Drop                                                   | Jazz  |
+| Coronation Drop                                              | Jazz  |
+| Overtime                                                     | Jazz  |
+| Imagination                                                  | Jazz  |
+| Don't Take Your Love From Me                                 | Jazz  |
+| Midget                                                       | Jazz  |
+| I'm Coming Virginia                                          | Jazz  |
+| Payin' Them Dues Blues                                       | Jazz  |
+| Jungle Drums                                                 | Jazz  |
+| Showcase                                                     | Jazz  |
+| Swedish Schnapps                                             | Jazz  |
+| Roll Call                                                    | Jazz  |
+| Otay                                                         | Jazz  |
+| Groovus Interruptus                                          | Jazz  |
+| Paris On Mine                                                | Jazz  |
+| In Time                                                      | Jazz  |
+| Plan B                                                       | Jazz  |
+| Outbreak                                                     | Jazz  |
+| Baltimore, DC                                                | Jazz  |
+| Talkin Loud and Saying Nothin                                | Jazz  |
+| Doce De Carnaval (Candy All)                                 | Jazz  |
+| Lamento De Carnaval                                          | Jazz  |
+| Pretinha                                                     | Jazz  |
+| Colibri                                                      | Jazz  |
+| Love Is The Colour                                           | Jazz  |
+| Magnetic Ocean                                               | Jazz  |
+| Deep Waters                                                  | Jazz  |
+| L'Arc En Ciel De Miles                                       | Jazz  |
+| Gypsy                                                        | Jazz  |
+| Journey Into Sunlight                                        | Jazz  |
+| Sunchild                                                     | Jazz  |
+| Millenium                                                    | Jazz  |
+| Thinking 'Bout Tomorrow                                      | Jazz  |
+| Jacob's Ladder                                               | Jazz  |
+| She Wears Black                                              | Jazz  |
+| Dark Side Of The Cog                                         | Jazz  |
+| Springsville                                                 | Jazz  |
+| The Maids Of Cadiz                                           | Jazz  |
+| The Duke                                                     | Jazz  |
+| My Ship                                                      | Jazz  |
+| Miles Ahead                                                  | Jazz  |
+| Blues For Pablo                                              | Jazz  |
+| New Rhumba                                                   | Jazz  |
+| The Meaning Of The Blues                                     | Jazz  |
+| Lament                                                       | Jazz  |
+| I Don't Wanna Be Kissed (By Anyone But You)                  | Jazz  |
+| Springsville (Alternate Take)                                | Jazz  |
+| Blues For Pablo (Alternate Take)                             | Jazz  |
+| The Meaning Of The Blues/Lament (Alternate Take)             | Jazz  |
+| I Don't Wanna Be Kissed (By Anyone But You) (Alternate Take) | Jazz  |
+| Morning Dance                                                | Jazz  |
+| Jubilee                                                      | Jazz  |
+| Rasul                                                        | Jazz  |
+| Song For Lorraine                                            | Jazz  |
+| Starburst                                                    | Jazz  |
+| Heliopolis                                                   | Jazz  |
+| It Doesn't Matter                                            | Jazz  |
+| Little Linda                                                 | Jazz  |
+| End Of Romanticism                                           | Jazz  |
+| Amanda                                                       | Jazz  |
+| Despertar                                                    | Jazz  |
+| OAM's Blues                                                  | Jazz  |
++--------------------------------------------------------------+-------+
+130 rows in set (0.00 sec)
+
+mysql> notee
