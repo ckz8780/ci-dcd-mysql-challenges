@@ -75,6 +75,12 @@ try:
         cursor.executemany("UPDATE Friends SET age = %s WHERE name = %s;",
                            rows)
         connection.commit()
+        
+    # Bob has betrayed us. Let's delete him!
+    with connection.cursor() as cursor:
+        rows = cursor.execute("DELETE FROM Friends WHERE name = 'bob';")
+        connection.commit()
+    
 finally: 
     # Close the connection regardless of whether the above was successful
     connection.close()
