@@ -1,0 +1,12 @@
+mysql> select count(*), Employee.FirstName, Employee.LastName from Customer
+    join Employee on Customer.SupportRepId = Employee.EmployeeId
+    where Employee.FirstName = 'Jane' and Employee.LastName = 'Peacock';
+    
++----------+-----------+----------+
+| count(*) | FirstName | LastName |
++----------+-----------+----------+
+|       21 | Jane      | Peacock  |
++----------+-----------+----------+
+1 row in set (0.00 sec)
+
+mysql> notee

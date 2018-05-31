@@ -1,0 +1,13 @@
+mysql> select count(Track.Name), MediaType.Name from Track join MediaType on Track.MediaTypeId = MediaType.MediaTypeId group by MediaType.Name order by count(Track.Name) desc;
++-------------------+-----------------------------+
+| count(Track.Name) | Name                        |
++-------------------+-----------------------------+
+|              3034 | MPEG audio file             |
+|               237 | Protected AAC audio file    |
+|               214 | Protected MPEG-4 video file |
+|                11 | AAC audio file              |
+|                 7 | Purchased AAC audio file    |
++-------------------+-----------------------------+
+5 rows in set (0.00 sec)
+
+mysql> notee
