@@ -47,8 +47,14 @@ try:
         row = ("bob", 21, "1990-02-06 23:04:56")
         cursor.execute("INSERT INTO Friends VALUES (%s, %s, %s);", row)
         connection.commit()
-            
-    
+        
+    # Insert a bunch of rows at once!
+    with connection.cursor() as cursor:
+        rows = [("Albert", 25, "1990-02-06 23:04:56"),
+                ("Jim", 56, "1955-05-09 13:12:45"),
+                ("Fred", 100, "1911-09-12 01:01:01")]
+        cursor.executemany("INSERT INTO Friends VALUES (%s,%s,%s);", rows)
+        connection.commit()
 finally: 
     # Close the connection regardless of whether the above was successful
     connection.close()
