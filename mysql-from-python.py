@@ -55,6 +55,11 @@ try:
                 ("Fred", 100, "1911-09-12 01:01:01")]
         cursor.executemany("INSERT INTO Friends VALUES (%s,%s,%s);", rows)
         connection.commit()
+        
+    # Let's change Bob's age to 22
+    with connection.cursor() as cursor:
+        cursor.execute("UPDATE Friends SET age = 22 WHERE name = 'bob';")
+        connection.commit()
 finally: 
     # Close the connection regardless of whether the above was successful
     connection.close()
