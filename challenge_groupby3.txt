@@ -1,0 +1,19 @@
+mysql> select Artist.Name as 'Artist', count(Track.Name) as 'Total Tracks' from Track
+    join Album on Track.AlbumId = Album.AlbumId
+    join Artist on Album.ArtistId = Artist.ArtistId
+    group by Artist.ArtistId
+    order by count(Track.Name) desc
+    limit 5;
+    
++--------------+--------------+
+| Artist       | Total Tracks |
++--------------+--------------+
+| Iron Maiden  |          213 |
+| U2           |          135 |
+| Led Zeppelin |          114 |
+| Metallica    |          112 |
+| Lost         |           92 |
++--------------+--------------+
+5 rows in set (0.00 sec)
+
+mysql> notee

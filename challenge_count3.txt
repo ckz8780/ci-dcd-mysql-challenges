@@ -1,4 +1,8 @@
-mysql> select count(Track.Name), MediaType.Name from Track join MediaType on Track.MediaTypeId = MediaType.MediaTypeId group by MediaType.Name order by count(Track.Name) desc;
+mysql> select count(Track.Name), MediaType.Name from Track
+    join MediaType on Track.MediaTypeId = MediaType.MediaTypeId
+    group by MediaType.Name
+    order by count(Track.Name) desc;
+    
 +-------------------+-----------------------------+
 | count(Track.Name) | Name                        |
 +-------------------+-----------------------------+

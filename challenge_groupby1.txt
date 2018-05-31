@@ -1,0 +1,9 @@
+mysql> select City, count(*) as 'Number of Customers' from Customer where City = 'Berlin';
++--------+---------------------+
+| City   | Number of Customers |
++--------+---------------------+
+| Berlin |                   2 |
++--------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> notee

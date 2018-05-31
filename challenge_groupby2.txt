@@ -1,0 +1,17 @@
+mysql> select Track.Name as 'Track Name',
+    count(InvoiceLine.TrackId) as 'Number of Sales',
+    InvoiceLine.UnitPrice as 'Price per Track',
+    sum(InvoiceLine.UnitPrice * Quantity) as 'Total Sales' from InvoiceLine
+    join Track on InvoiceLine.TrackId = Track.TrackId
+    where Track.Name = 'The Woman King'
+    group by InvoiceLine.TrackId
+    order by InvoiceLine.TrackId;
+    
++----------------+-----------------+-----------------+-------------+
+| Track Name     | Number of Sales | Price per Track | Total Sales |
++----------------+-----------------+-----------------+-------------+
+| The Woman King |               2 |            1.99 |        3.98 |
++----------------+-----------------+-----------------+-------------+
+1 row in set (0.00 sec)
+
+mysql> notee
