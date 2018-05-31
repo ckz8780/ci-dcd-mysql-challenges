@@ -60,6 +60,21 @@ try:
     with connection.cursor() as cursor:
         cursor.execute("UPDATE Friends SET age = 22 WHERE name = 'bob';")
         connection.commit()
+        
+    # You could also use string interpolation to do that...
+    with connection.cursor() as cursor:
+        cursor.execute("UPDATE Friends SET age = %s WHERE name = %s;",
+                       (23, 'bob'))
+        connection.commit()
+        
+    # And you can update many rows at a time just like inserting:
+    with connection.cursor() as cursor:
+        rows = [(28, 'bob'),
+                (24, 'jim'),
+                (29, 'fred')]
+        cursor.executemany("UPDATE Friends SET age = %s WHERE name = %s;",
+                           rows)
+        connection.commit()
 finally: 
     # Close the connection regardless of whether the above was successful
     connection.close()
