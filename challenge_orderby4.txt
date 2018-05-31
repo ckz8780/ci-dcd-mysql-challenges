@@ -1,0 +1,22 @@
+mysql> select FirstName, LastName, InvoiceDate, Total from Invoice
+    join Customer on Invoice.CustomerId = Customer.CustomerId
+    order by Total desc, InvoiceDate desc
+    limit 10;
+    
++------------+--------------+---------------------+-------+
+| FirstName  | LastName     | InvoiceDate         | Total |
++------------+--------------+---------------------+-------+
+| Helena     | Holý         | 2013-11-13 00:00:00 | 25.86 |
+| Richard    | Cunningham   | 2012-08-05 00:00:00 | 23.86 |
+| Hugh       | O'Reilly     | 2011-04-28 00:00:00 | 21.86 |
+| Ladislav   | Kovács       | 2010-02-18 00:00:00 | 21.86 |
+| Victor     | Stevens      | 2011-05-29 00:00:00 | 18.86 |
+| Astrid     | Gruber       | 2010-01-18 00:00:00 | 18.86 |
+| Luis       | Rojas        | 2010-01-13 00:00:00 | 17.91 |
+| Isabelle   | Mercier      | 2012-10-06 00:00:00 | 16.86 |
+| František  | Wichterlová  | 2012-09-05 00:00:00 | 16.86 |
+| Bjørn      | Hansen       | 2011-06-29 00:00:00 | 15.86 |
++------------+--------------+---------------------+-------+
+10 rows in set (0.00 sec)
+
+mysql> notee

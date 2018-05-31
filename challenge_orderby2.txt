@@ -1,0 +1,11 @@
+mysql> select EmployeeId, LastName, FirstName, HireDate from Employee order by HireDate desc limit 3;
++------------+----------+-----------+---------------------+
+| EmployeeId | LastName | FirstName | HireDate            |
++------------+----------+-----------+---------------------+
+|          8 | Callahan | Laura     | 2004-03-04 00:00:00 |
+|          7 | King     | Robert    | 2004-01-02 00:00:00 |
+|          5 | Johnson  | Steve     | 2003-10-17 00:00:00 |
++------------+----------+-----------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> notee
