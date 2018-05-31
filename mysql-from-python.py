@@ -80,6 +80,17 @@ try:
     with connection.cursor() as cursor:
         rows = cursor.execute("DELETE FROM Friends WHERE name = 'bob';")
         connection.commit()
+        
+    # He's come back begging for forgiveness...we'll add him in again, but we've got an agenda
+    with connection.cursor() as cursor:
+        row = ("bob", 21, "1990-02-06 23:04:56")
+        cursor.execute("INSERT INTO Friends VALUES (%s, %s, %s);", row)
+        connection.commit()
+        
+    # We never liked Bob anyway. Here's an alternative way to delete him:
+    with connection.cursor() as cursor:
+        rows = cursor.execute("DELETE FROM Friends WHERE name = %s;", 'bob')
+        connection.commit()
     
 finally: 
     # Close the connection regardless of whether the above was successful
