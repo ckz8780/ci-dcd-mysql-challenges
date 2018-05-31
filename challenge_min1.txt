@@ -1,0 +1,9 @@
+mysql> select min(BirthDate) from Employee;
++---------------------+
+| min(BirthDate)      |
++---------------------+
+| 1947-09-19 00:00:00 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> notee

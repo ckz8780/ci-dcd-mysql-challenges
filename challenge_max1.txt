@@ -1,0 +1,9 @@
+mysql> select max(HireDate) from Employee;
++---------------------+
+| max(HireDate)       |
++---------------------+
+| 2004-03-04 00:00:00 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> notee
