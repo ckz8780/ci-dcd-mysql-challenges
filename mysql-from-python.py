@@ -87,12 +87,27 @@ try:
         cursor.execute("INSERT INTO Friends VALUES (%s, %s, %s);", row)
         connection.commit()
         
-    # We never liked Bob anyway. Here's an alternative way to delete him:
+    # We never liked Bob anyway. Here's an alternative way to delete him
     with connection.cursor() as cursor:
         rows = cursor.execute("DELETE FROM Friends WHERE name = %s;", 'bob')
         connection.commit()
-    
+        
+    # Looks like Jim and Fred are mad at us now. Luckily we can delete them both at once
+    with connection.cursor() as cursor:
+        rows = cursor.executemany("DELETE FROM Friends WHERE name = %s;", ['Jim', 'Fred'])
+        connection.commit()
+        
+    # Finally, you can delete with a list and string formatting
+    with connection.cursor() as cursor:
+        list_of_names = ['Jim', 'Bob', 'Albert', 'Fred']
+        # Prepare a string with same number of placeholders as in list_of_names
+        format_strings = ','.join(['%s'] * len(list_of_names))
+        cursor.execute(
+            "DELETE FROM Friends WHERE name in ({});".format(format_strings),
+            list_of_names)
+        connection.commit()
 finally: 
     # Close the connection regardless of whether the above was successful
+    print('You have zero friends :( ... (Check it! select * from Friends;)')
     connection.close()
     
