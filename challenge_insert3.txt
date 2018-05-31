@@ -1,0 +1,13 @@
++--------------------------------------------+
+| Just use commas to separate the values you |
+| want to insert, in parentheses of course!  |
++--------------------------------------------+
+
+mysql> Insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    values("Extra Track 2", 349, 2, 1, "U2", 290000, 1234, 0.99),
+    ("Extra Track 3", 349, 2, 1, "U2", 290000, 1234, 0.99),
+    ("Extra Track 4", 349, 2, 1, "U2", 290000, 1234, 0.99);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> notee

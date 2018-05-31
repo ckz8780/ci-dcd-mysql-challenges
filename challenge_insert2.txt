@@ -1,0 +1,20 @@
++--------------------------------------------------------+
+| Note that my Album ID is different. Make sure yours is |
+|                        correct!                        |
++--------------------------------------------------------+
+
+mysql> Insert into Track (Name, AlbumId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values("Extra Track", 348, 1, "U2", 290000, 1234, 0.99);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`Chinook`.`Track`, CONSTRAINT `FK_TrackAlbumId` FOREIGN KEY (`AlbumId`) REFERENCES `Album` (`AlbumId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+
+
+
++---------------------------------------------------------------------+
+| The error is due to the fact that we missed a column when inserting |
++---------------------------------------------------------------------+
+
+mysql> Insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) values("Extra Track", 349, 2, 1, "U2", 290000, 1234, 0.99);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> notee
